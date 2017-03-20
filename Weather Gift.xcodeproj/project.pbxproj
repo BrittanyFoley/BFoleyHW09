@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		53D994D01E79DFD3008D8747 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D994CF1E79DFD3008D8747 /* AppDelegate.swift */; };
-		53D994D21E79DFD3008D8747 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D994D11E79DFD3008D8747 /* ViewController.swift */; };
 		53D994D51E79DFD3008D8747 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53D994D31E79DFD3008D8747 /* Main.storyboard */; };
 		53D994D71E79DFD3008D8747 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53D994D61E79DFD3008D8747 /* Assets.xcassets */; };
 		53D994DA1E79DFD3008D8747 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53D994D81E79DFD3008D8747 /* LaunchScreen.storyboard */; };
+		53D994E21E7A385D008D8747 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D994E11E7A385D008D8747 /* DetailVC.swift */; };
+		53D994E41E7B0506008D8747 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D994E31E7B0506008D8747 /* ListVC.swift */; };
+		53D994E61E7B06FF008D8747 /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D994E51E7B06FF008D8747 /* PageVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		53D994CC1E79DFD3008D8747 /* Weather Gift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weather Gift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53D994CF1E79DFD3008D8747 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		53D994D11E79DFD3008D8747 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		53D994D41E79DFD3008D8747 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		53D994D61E79DFD3008D8747 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53D994D91E79DFD3008D8747 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53D994DB1E79DFD3008D8747 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53D994E11E7A385D008D8747 /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		53D994E31E7B0506008D8747 /* ListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
+		53D994E51E7B06FF008D8747 /* PageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				53D994CF1E79DFD3008D8747 /* AppDelegate.swift */,
-				53D994D11E79DFD3008D8747 /* ViewController.swift */,
+				53D994E51E7B06FF008D8747 /* PageVC.swift */,
+				53D994E11E7A385D008D8747 /* DetailVC.swift */,
+				53D994E31E7B0506008D8747 /* ListVC.swift */,
 				53D994D31E79DFD3008D8747 /* Main.storyboard */,
 				53D994D61E79DFD3008D8747 /* Assets.xcassets */,
 				53D994D81E79DFD3008D8747 /* LaunchScreen.storyboard */,
@@ -136,8 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53D994D21E79DFD3008D8747 /* ViewController.swift in Sources */,
+				53D994E41E7B0506008D8747 /* ListVC.swift in Sources */,
+				53D994E61E7B06FF008D8747 /* PageVC.swift in Sources */,
 				53D994D01E79DFD3008D8747 /* AppDelegate.swift in Sources */,
+				53D994E21E7A385D008D8747 /* DetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
