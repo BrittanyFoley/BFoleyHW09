@@ -11,8 +11,9 @@ import UIKit
 class PageVC: UIPageViewController {
     
     var currentPage = 0
-    var locationsArray = ["Local City", "Sydney, Australia", "Accra, Ghana", "Uglich, Russia"]
+    var locationsArray = [weatherLocation]()
     var pageControl: UIPageControl!
+    var listButton: UIButton!
     let barButtonWidth: CGFloat = 44
     
     override func viewDidLoad() {
@@ -21,12 +22,18 @@ class PageVC: UIPageViewController {
         delegate = self
         dataSource = self
         
+        var newLocation = weatherLocation()
+        newLocation.name = "Unknown Weather Location"
+        locationsArray.append(newLocation)
+        
         setViewControllers([createDetailVC(forPage: 0)], direction: .forward, animated: false, completion: nil)
         
         configurePageControl()
+        configureListButton()
 
     }
     
+//MARK: - UI Configuration methods
     func configurePageControl() {
         let pageControlHeight: CGFloat = barButtonWidth
         let pageControlWidth: CGFloat = view.frame.width - (barButtonWidth * 2)
@@ -42,6 +49,43 @@ class PageVC: UIPageViewController {
         
     }
     
+    
+    func configureListButton() {
+        let barButtonHeight = barButtonWidth
+        listButton = UIButton(frame: CGRect(x: view.frame.width - barButtonWidth, y: view.frame.height - barButtonHeight, width: barButtonWidth, height: barButtonHeight))
+        
+        listButton.setBackgroundImage(UIImage(named: "listButton"), for: .normal)
+        listButton.setBackgroundImage(UIImage(named:"listButtonHighlighted"), for: .highlighted)
+        
+        listButton.addTarget(self, action: #selector(segueToListVC), for: .touchUpInside)
+        
+        view.addSubview(listButton)
+        
+        
+    }
+    
+    //MARK: - Segues
+    
+    func segueToListVC(sender: UIButton!) {
+        performSegue(withIdentifier: "ToListVC", sender: sender)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ToListVC" {
+            let controller = segue.destination as! ListVC
+            controller.locationsArray = locationsArray
+            controller.currentPage = currentPage
+        }
+    }
+    
+    @IBAction func unwindFromListVC(sender: UIStoryboardSegue) {
+        pageControl.numberOfPages = locationsArray.count
+        pageControl.currentPage = currentPage
+        setViewControllers([createDetailVC(forPage: currentPage)], direction: .forward, animated: false, completion: nil)
+        
+    }
+    
+    //MARK: - Create View Controller for UI PageVC
     func createDetailVC(forPage page: Int) -> DetailVC {
         
         currentPage = min(max(0, page), locationsArray.count - 1)
