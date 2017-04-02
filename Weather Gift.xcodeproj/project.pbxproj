@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		533363931E8AC1350082981E /* WeatherLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533363921E8AC1350082981E /* WeatherLocation.swift */; };
 		53C8F40E1E8B606E002A2AF3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C8F40D1E8B606E002A2AF3 /* Constants.swift */; };
+		53C8F4101E9142D5002A2AF3 /* DayWeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C8F40F1E9142D5002A2AF3 /* DayWeatherCell.swift */; };
 		53D994D01E79DFD3008D8747 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D994CF1E79DFD3008D8747 /* AppDelegate.swift */; };
 		53D994D51E79DFD3008D8747 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53D994D31E79DFD3008D8747 /* Main.storyboard */; };
 		53D994D71E79DFD3008D8747 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53D994D61E79DFD3008D8747 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		533363921E8AC1350082981E /* WeatherLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherLocation.swift; sourceTree = "<group>"; };
 		53C8F40D1E8B606E002A2AF3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		53C8F40F1E9142D5002A2AF3 /* DayWeatherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayWeatherCell.swift; sourceTree = "<group>"; };
 		53D994CC1E79DFD3008D8747 /* Weather Gift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weather Gift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53D994CF1E79DFD3008D8747 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53D994D41E79DFD3008D8747 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				53C8F40D1E8B606E002A2AF3 /* Constants.swift */,
 				53D994E11E7A385D008D8747 /* DetailVC.swift */,
 				53D994E31E7B0506008D8747 /* ListVC.swift */,
+				53C8F40F1E9142D5002A2AF3 /* DayWeatherCell.swift */,
 				53D994D31E79DFD3008D8747 /* Main.storyboard */,
 				53D994D61E79DFD3008D8747 /* Assets.xcassets */,
 				53D994D81E79DFD3008D8747 /* LaunchScreen.storyboard */,
@@ -223,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53C8F4101E9142D5002A2AF3 /* DayWeatherCell.swift in Sources */,
 				533363931E8AC1350082981E /* WeatherLocation.swift in Sources */,
 				53D994E41E7B0506008D8747 /* ListVC.swift in Sources */,
 				53D994E61E7B06FF008D8747 /* PageVC.swift in Sources */,
